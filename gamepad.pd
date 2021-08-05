@@ -1,4 +1,4 @@
-#N canvas 1871 307 956 1017 12;
+#N canvas 1555 368 956 891 12;
 #X floatatom 445 104 12 0 0 1 value - -, f 12;
 #X symbolatom 445 81 15 0 0 1 event_code - -, f 15;
 #X obj 400 240 unpack s s f;
@@ -39,7 +39,7 @@
 #X floatatom 183 85 5 0 0 3 X - #0-abs_x, f 5;
 #N canvas 1148 417 450 375 \$0-sttorage 0;
 #X restore 402 458 pd \$0-sttorage;
-#N canvas 2114 349 956 1149 \$0-sttorage2 0;
+#N canvas 188 161 956 891 \$0-sttorage2 0;
 #X obj 196 201 unpack s f, f 23;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array scale_maj 100 float 3 black black;
@@ -270,7 +270,7 @@
 #X connect 105 0 92 0;
 #X connect 106 0 94 0;
 #X restore 211 12 pd pitchbender;
-#N canvas 2949 375 272 619 panicer 0;
+#N canvas 1173 189 272 644 panicer 0;
 #X floatatom 60 201 3 0 0 0 - - -, f 3;
 #X msg 60 144 16, f 2;
 #X obj 35 171 ct1u;
@@ -354,8 +354,8 @@
 #X obj 54 -42 inlet;
 #X floatatom 215 423 5 0 0 1 octave #0-octave_offset -, f 5;
 #X obj 130 97 tgl 41 0 empty \$0-start_tgl_inv st\ inv 4 10 0 10 #fcfcfc
-#000000 #60c300 0 1;
-#N canvas 2276 182 956 970 \$0-midiout 0;
+#000000 #60c300 1 1;
+#N canvas 424 475 956 995 \$0-midiout 0;
 #X obj 350 26 inlet;
 #X obj 453 25 inlet;
 #X floatatom 321 134 5 0 0 0 - - -, f 5;
@@ -445,13 +445,13 @@
 #000000 #60c300 0 1;
 #X obj 103 100 route btn_8 btn_9, f 39;
 #X obj 225 178 tgl 41 0 \$0-start_tgl_inv empty st\ inv 4 10 0 10 #fcfcfc
-#000000 #60c300 0 1;
+#000000 #60c300 1 1;
 #X obj 91 145 - 1;
 #X obj 91 174 * -1;
 #X obj 126 146 tgl 41 0 \$0-sel_tgl empty select 1 10 0 10 #fcfcfc
 #000000 #60c300 0 1;
 #X obj 91 197 tgl 41 0 \$0-sel_tgl_inv empty sel\ inv -1 7 0 10 #fcfcfc
-#000000 #60c300 0 1;
+#000000 #60c300 1 1;
 #X obj 95 18 inlet;
 #X obj 137 337 outlet;
 #X connect 0 0 1 0;
@@ -484,7 +484,7 @@
 #X obj 85 360 sel 0 1 2 3 8 9 12 13 14 15;
 #X floatatom 84 427 5 0 0 0 set_note - #0-set_note, f 5;
 #X obj 125 265 tgl 41 0 empty \$0-start_tgl_inv st\ inv 4 10 0 10 #fcfcfc
-#000000 #60c300 0 1;
+#000000 #60c300 1 1;
 #X obj 273 135 tgl 41 0 empty \$0-start_tgl start 7 10 0 10 #fcfcfc
 #000000 #60c300 0 1;
 #X msg 379 264 84;
@@ -550,7 +550,7 @@
 #X obj 216 -18 cnv 36 86 15 empty \$0-open-canvas 8 101 16 0 14 #e0e0e0
 #000000 0;
 #X obj 56 27 hradio 15 0 1 38 empty empty empty 0 -6 0 8 #d8fcd8 #000000
-#000000 31;
+#000000 11;
 #X obj 56 -21 inlet;
 #X obj 55 284 int;
 #X msg 197 382 set \$1 \$2;
@@ -560,12 +560,14 @@
 #X msg 188 504 close;
 #X msg 188 469 refresh;
 #X msg 105 441 poll 2;
-#X msg 181 443 open 31;
+#X msg 181 443 open 11;
 #X obj 105 477 hid;
 #X obj 105 413 t b a;
 #X obj 105 545 outlet;
 #X floatatom 45 50 5 0 0 1 program_change_CH1 program_change_CH1 -
 , f 5;
+#X floatatom 44 71 5 0 0 1 program_change_CH10 program_change_CH10
+-, f 5;
 #X connect 2 0 15 0;
 #X connect 2 1 1 0;
 #X connect 2 2 0 0;
