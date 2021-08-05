@@ -1,4 +1,4 @@
-#N canvas 1961 294 787 706 12;
+#N canvas 58 125 787 731 12;
 #X symbolatom 99 122 14 0 0 1 addr_1 phone_ip_address -, f 14;
 #X floatatom 156 88 5 0 0 1 port-out netport-out dduumm, f 5;
 #X floatatom 97 210 5 0 0 1 port-in - netport-in, f 5;
