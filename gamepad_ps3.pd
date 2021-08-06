@@ -1,21 +1,22 @@
-#N canvas 1602 61 956 992 12;
-#X obj 512 -2154 netOSC2;
-#X obj 23 -2039 euc_drums_kick_snare;
-#X obj 269 -2039 euc_drums_hh_fills;
-#X obj 23 -2150 MIDI_CLOCK;
-#X obj 14 -1564 gamepad;
-#X floatatom 705 -1759 3 0 0 0 - - -, f 3;
-#X msg 705 -1816 16, f 2;
-#X obj 680 -1789 ct1u;
-#X obj 680 -1840 t b b;
-#X obj 680 -1940 bng 73 250 50 0 empty midipanic PANIC -170 31 0 48
+#N canvas 1602 61 956 814 12;
+#X obj 474 -2250 netOSC2;
+#X obj 13 -2069 euc_drums_kick_snare;
+#X obj 229 -2069 euc_drums_hh_fills;
+#X obj 13 -2230 MIDI_CLOCK;
+#X obj 8 -1601 gamepad;
+#X floatatom 808 -2001 3 0 0 0 - - -, f 3;
+#X msg 808 -2058 16, f 2;
+#X obj 783 -2031 ct1u;
+#X obj 783 -2082 t b b;
+#X obj 783 -2182 bng 73 250 50 0 empty midipanic PANIC -31 -58 0 48
 #fcfcfc #000000 #8d0000;
-#X obj 712 -1702 + 16;
-#X obj 680 -1623 ctlout;
-#X obj 680 -1730 t f f;
-#X msg 680 -1669 127 123 \$1;
-#X msg 625 -2174 192.168.1.11;
-#X obj 798 -1995 wf-generator22-2;
+#X obj 815 -1944 + 16;
+#X obj 783 -1865 ctlout;
+#X obj 783 -1972 t f f;
+#X msg 783 -1911 127 123 \$1;
+#X msg 587 -2270 192.168.1.11;
+#X obj 435 -2074 wf-generator22-2;
+#X msg 381 -2269 192.168.1.14;
 #X connect 3 0 2 0;
 #X connect 3 0 1 0;
 #X connect 6 0 7 1;
@@ -29,3 +30,4 @@
 #X connect 12 1 10 0;
 #X connect 13 0 11 0;
 #X connect 14 0 0 0;
+#X connect 16 0 0 0;

@@ -1,11 +1,11 @@
-#N canvas 1640 132 894 658 12;
+#N canvas 2170 482 894 683 12;
 #X obj 89 10 cnv 15 82 40 \$0-dum \$0-ddd empty 2 18 0 18 #0a6100 #ffffff
 0;
 #X obj 63 286 + 1;
 #X obj 263 246 + 1;
 #X obj 233 372 + 1;
 #X obj 233 488 outlet;
-#X obj 17 11 tgl 20 0 dumm \$0-pd_dsp_tgl ON 1 8 0 10 #000000 #000000
+#X obj 17 11 tgl 20 0 dumm \$0-pd_dsp_tgl OFF 1 8 0 10 #000000 #000000
 #ffffff 0 1;
 #X text 18 31 DSP;
 #X obj 33 245 bng 15 250 50 0 empty \$0-clocktick tick -4 -9 0 10 #fcfcfc
@@ -36,7 +36,7 @@
 #X obj 691 289 bng 46 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X text 115 50 BPM;
-#X obj 90 11 cnv 15 80 38 \$0-dum \$0-BPMgui \ 135.12 2 18 0 18 #000000
+#X obj 90 11 cnv 15 80 38 \$0-dum \$0-BPMgui \ 180.005 2 18 0 18 #000000
 #ffffff 0;
 #X obj 388 11 cnv 15 40 40 \$0-dum \$0-ddd empty 2 18 0 18 #0a6100
 #ffffff 0;
@@ -46,7 +46,7 @@
 #ffffff 0;
 #X obj 457 12 cnv 15 38 38 \$0-dum \$0-pulse_note 1/16 2 18 0 14 #000000
 #ffffff 0;
-#N canvas 1823 314 975 548 \$0-osc 0;
+#N canvas 206 454 975 573 \$0-osc 0;
 #X obj 6 20 r parsedOSC;
 #X floatatom 291 256 5 0 0 3 clk_div - #0-clockDivide, f 5;
 #X floatatom 519 308 5 0 0 3 step_count - #0-step_count, f 5;
@@ -844,7 +844,7 @@ f 5;
 #X connect 90 0 34 0;
 #X connect 91 0 34 0;
 #X restore 17 206 pd \$0-gui;
-#N canvas 642 105 713 512 \$0-parameters 0;
+#N canvas 2682 267 713 512 \$0-parameters 0;
 #X floatatom 281 182 5 0 0 3 metroSpeed - #0-metronomSpeed, f 5;
 #X floatatom 281 39 5 0 0 2 clockBPM #0-clockBPM -, f 5;
 #X floatatom 165 45 5 0 0 2 clockBPM #0-clockBPM -, f 5;
@@ -868,6 +868,10 @@ f 5;
 #fcfcfc #000000 #0bf909;
 #X floatatom 125 118 1 0 0 3 z3 - #0-zeroClock3, f 1;
 #X floatatom 305 244 5 0 0 3 metroSpeed - metronomSpeed, f 5;
+#X obj 549 42 r clock_var_in;
+#X obj 549 71 tgl 33 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 545 169 s \$0-midiclockTGL;
 #X connect 1 0 13 0;
 #X connect 2 0 4 0;
 #X connect 4 0 3 0;
@@ -885,6 +889,8 @@ f 5;
 #X connect 15 0 14 0;
 #X connect 15 0 16 0;
 #X connect 15 0 17 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
 #X restore 17 135 pd \$0-parameters;
 #X floatatom 236 266 3 0 0 0 - - -, f 3;
 #X obj 233 208 bng 15 250 50 0 empty \$0-pulseBNG pulsBNG 17 7 0 10
@@ -940,16 +946,16 @@ f 5;
 #X text 455 51 PULSE;
 #X obj 293 10 cnv 15 40 40 \$0-dum \$0-ddd empty 2 18 0 18 #0a6100
 #ffffff 0;
-#X obj 294 11 cnv 15 38 38 \$0-dum \$0-beat_counter \ 3 13 18 0 18
+#X obj 294 11 cnv 15 38 38 \$0-dum \$0-beat_counter \ 4 13 18 0 18
 #000000 #ffffff 0;
 #X obj 333 10 cnv 15 40 40 \$0-dum \$0-ddd empty 2 18 0 18 #0a6100
 #ffffff 0;
-#X obj 334 11 cnv 15 38 38 \$0-dum \$0-tickGUI \ 4 13 18 0 18 #000000
+#X obj 334 11 cnv 15 38 38 \$0-dum \$0-tickGUI \ 3 13 18 0 18 #000000
 #ffffff 0;
 #X text 332 50 TICK;
 #X obj 253 10 cnv 15 40 40 \$0-dum \$0-ddd empty 2 18 0 18 #0a6100
 #ffffff 0;
-#X obj 254 11 cnv 15 38 38 \$0-dum \$0-bar_counter \ 90 8 18 0 18 #000000
+#X obj 254 11 cnv 15 38 38 \$0-dum \$0-bar_counter \ 6 13 18 0 18 #000000
 #ffffff 0;
 #X text 255 50 BAR;
 #X text 295 50 BEAT;
